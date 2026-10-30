@@ -32,22 +32,22 @@ jobs:
         aerospike-image: [ce-5.7.0.15]
         test-image: [ubuntu-22.04]
         include:
-          - node-version: 18
+          - node-version: 22.23.4
             range: ">=5.2.0 <6.3.0"
             range_clean: gte.5.2.0
             aerospike-image: ce-6.4.0.3
             test-image: ubuntu-latest
-          - node-version: 20
+          - node-version: 22.23.4
             range: ">=5.5.0"
             range_clean: gte.5.5.0
             aerospike-image: ce-6.4.0.3
             test-image: ubuntu-latest
-          - node-version: 22
+          - node-version: 22.23.4
             range: ">=5.12.1"
             range_clean: gte.5.12.1
             aerospike-image: ce-6.4.0.3
             test-image: ubuntu-latest
-          - node-version: 22
+          - node-version: 22.23.4
             range: ">=6.0.0"
             range_clean: gte.6.0.0
             aerospike-image: ce-6.4.0.3
@@ -251,7 +251,7 @@ jobs:
     strategy:
       matrix:
         # using node versions matrix since this plugin testing fails due to install differences between node versions
-        node-version: [18, 20, 22]
+        node-version: [22.23.4, 22.23.4, 22.23.4]
         range: [">=1.0.0"]
         include:
           - node-version: 24
@@ -340,7 +340,7 @@ jobs:
           - "^3.0.7"
           - ">=4.0.0 <4.2.0"
         include:
-          - node-version: 18
+          - node-version: 22.23.4
             range: ">=4.2.0"
     runs-on: ubuntu-latest
     permissions:
@@ -1143,7 +1143,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - node-version: 18
+          - node-version: 22.23.4
             range: ">=6.1.0 <7.0.0"
             range_clean: gte.6.16.0.and.lt.7.0.0
           - node-version: "latest"
