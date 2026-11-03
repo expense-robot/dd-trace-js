@@ -31,8 +31,6 @@ RUN mkdir -p /usr/local/nvm \
 	&& wget -q -O - https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash \
 	&& . $NVM_DIR/nvm.sh \
 	&& nvm install --no-progress 22.23.4 \
-	&& nvm install --no-progress 22.23.4 \
-	&& nvm install --no-progress 22.23.4 \
 	&& nvm alias default 22 \
 	&& nvm use 22
 
